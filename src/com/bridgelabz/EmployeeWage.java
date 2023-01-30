@@ -5,12 +5,7 @@ import java.util.Scanner;
 public class EmployeeWage {
 
 	static int wagePerHour = 20;
-	static int workingHoursPerDayParttimer = 4;
-	static int workingHoursPerDayFulltimer = 8;
-	static int workingDaysForAMonth = 20;
-
-	static int wage = (int)(wagePerHour * workingHoursPerDayFulltimer * workingDaysForAMonth);
-	static int wage2 = (int)(wagePerHour * workingHoursPerDayParttimer * workingDaysForAMonth);
+	
 
 
 	public static void main(String[] args) {
@@ -20,7 +15,25 @@ public class EmployeeWage {
 
 		Scanner scan = new Scanner(System.in); 
 		int number = scan.nextInt();
+		
+		
+		System.out.println("Enter the value of working days of a month:");
+		Scanner a = new Scanner(System.in); 
+		int value = a.nextInt();
+		int workingDaysForAMonth = value;
+		
+		System.out.println("Enter the value of Working hours of a month:");
+		Scanner a1 = new Scanner(System.in); 
+		int value1 = a1.nextInt();
+		int workingHoursPerDayParttimer = value1;
+		int workingHoursPerDayFulltimer = value1;
+		
+		
+		int wage = (int)(wagePerHour * workingHoursPerDayFulltimer * workingDaysForAMonth);
+		int wage2 = (int)(wagePerHour * workingHoursPerDayParttimer * workingDaysForAMonth);
 
+		
+		
 		switch (number) {
 		case 1 :
 			System.out.println("Employee is Present & Fulltimer hence its monthly wage is : "+ wage +".");
@@ -33,6 +46,5 @@ public class EmployeeWage {
 		default:
 			System.out.println("Employee is Absent & its daily wage is 0.");
 		}
-		return;
 	}
 }
